@@ -1,5 +1,5 @@
 # Generatore-di-Segnali-per-BSPD-testing
-Generatore di segnali su scheda STM per il testing dei circuiti del BSPD.
+Generatore di segnali su scheda STM32F767ZI per il testing dei circuiti del BSPD.
 
 # Pin layout
 
