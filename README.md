@@ -3,7 +3,7 @@ Generatore di segnali su scheda STM per il testing dei circuiti del BSPD.
 
 # Pin layout
 
-![gensig pins](README/gensig pins 2.png)
+![gensig_pins](README/gensig_pins_2.png)
 
 ⚠ Attenzione: PE9 è un DAC PWM, bisogna collegarlo in serie con la massa con un condensatore a 47μF. 
 
