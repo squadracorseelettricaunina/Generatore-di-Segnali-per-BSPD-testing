@@ -31,10 +31,10 @@ step Fase[6][5]={
 	{{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=0,
 	.next_step=3, .cont=CONTINUE},
 
-	{.dac_signal[0]=0, .dac_signal[1]=2.7, .dac_signal[2]=0,
+	{.dac_signal[0]=0, .dac_signal[1]=2.8, .dac_signal[2]=0,
 	.next_step=1, .cont=CONTINUE},
 
-	{.dac_signal[0]=0, .dac_signal[1]=2.7, .dac_signal[2]=0,
+	{.dac_signal[0]=0, .dac_signal[1]=2.8, .dac_signal[2]=0,
 	.next_step=1, .cont=END_PHASE}},
 
 
@@ -42,10 +42,10 @@ step Fase[6][5]={
 	{{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=0,
 	.next_step=3, .cont=CONTINUE},
 
-	{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=2.7,
+	{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=2.8,
 	.next_step=1, .cont=CONTINUE},
 
-	{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=2.7,
+	{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=2.8,
 	.next_step=1, .cont=END_PHASE}},
 
 
@@ -63,13 +63,13 @@ step Fase[6][5]={
 	.cont=CONTINUE},
 
 	{.dac_signal[0]=2.9,
-	.dac_signal[1]=2.7,
+	.dac_signal[1]=2.8,
 	.dac_signal[2]=0,
 	.next_step=1,
 	.cont=CONTINUE},
 
 	{.dac_signal[0]=2.9,
-	.dac_signal[1]=2.7,
+	.dac_signal[1]=2.8,
 	.dac_signal[2]=0,
 	.next_step=1,
 	.cont=END_PHASE}},
@@ -89,7 +89,7 @@ step Fase[6][5]={
 	.cont=CONTINUE},
 
 	{.dac_signal[0]=2.9,
-	.dac_signal[1]=2.7,
+	.dac_signal[1]=2.8,
 	.dac_signal[2]=0,
 	.next_step=1,
 	.cont=CONTINUE},

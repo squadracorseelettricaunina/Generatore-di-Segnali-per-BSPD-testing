@@ -33,14 +33,14 @@ SIG1 = 0V
 
 aspetta 1s
 
-SIG2 = 2.7V
+SIG2 = 2.8V
 
 ## Fase 3 🟢: test logica sensore di pressione 2
 SIG1 = 0  SIG2 = 0V
 
 aspetta 1s
 
-SIG3 = 2.7V
+SIG3 = 2.8V
 
 ## Fase 4 🔴🔵: test apertura e richiusura dello shutdown crct
 SIG1 = 0;  SIG2 = 0V;  SIG3 = 0V
@@ -51,7 +51,7 @@ SIG1 = 2.9V
 
 aspetta 1s
 
-SIG2 = 2.7V
+SIG2 = 2.8V
 
 ## Fase 5 🔵🟢: test per la non apertura
 SIG1 = 0;  SIG2 = 0V;  SIG3 = 0V
@@ -62,7 +62,7 @@ SIG1 = 2.9V
 
 aspetta 1s
 
-SIG2 = 2.7V
+SIG2 = 2.8V
 
 aspetta 0.3s
 

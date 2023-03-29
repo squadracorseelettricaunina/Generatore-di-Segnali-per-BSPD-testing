@@ -60,8 +60,8 @@ all: main-build
 main-build: Gen.\ di\ Segnale\ -\ F767.elf secondary-outputs
 
 # Tool invocations
-Gen.\ di\ Segnale\ -\ F767.elf Gen.\ di\ Segnale\ -\ F767.map: $(OBJS) $(USER_OBJS) C:\Users\garry\Documents\UninaCorse\Gen.\ di\ Segnale\ -\ F767\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Gen. di Segnale - F767.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\garry\Documents\UninaCorse\Gen. di Segnale - F767\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Gen. di Segnale - F767.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Gen.\ di\ Segnale\ -\ F767.elf Gen.\ di\ Segnale\ -\ F767.map: $(OBJS) $(USER_OBJS) C:\Users\garry\Documents\GitHub\Generatore-di-Segnali-per-BSPD-testing\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Gen. di Segnale - F767.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\garry\Documents\GitHub\Generatore-di-Segnali-per-BSPD-testing\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Gen. di Segnale - F767.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
