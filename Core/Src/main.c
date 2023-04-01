@@ -53,6 +53,7 @@ uint8_t step_index=0;
 int stepMutex=1;
 int butt_Mutex=1;  //debounce che usa lo stesso TIM2 0.33s
 uint8_t next_step=1;
+uint8_t butt_counter=3;
 
 uint8_t *p_step_index=0;
 uint8_t *p_next_step=0;
@@ -320,7 +321,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			stepMutex=PLAY;
 			//printf("stepMutex=PLAY\r\n");
 		}
-		if(butt_Mutex==0){
+
+		if(butt_counter>0){
+			butt_counter--;
+		}
+		else if(butt_Mutex==0){
+			butt_counter=3;
 			butt_Mutex=1;
 		}
 	}

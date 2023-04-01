@@ -8,6 +8,8 @@
 #include "gensignal.h"
 #include "stdio.h"
 
+// Fasi per TIM2 cadenzato a 0.3s
+/*
 step Fase[6][5]={
 
 
@@ -104,6 +106,107 @@ step Fase[6][5]={
 	.dac_signal[1]=0,
 	.dac_signal[2]=0,
 	.next_step=1,
+	.cont=END_PHASE}}
+};
+*/
+
+// Fasi per TIM2 cadenzato a 0.1s
+step Fase[6][5]={
+
+
+	// RESET
+	{{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=0,
+	.next_step=3, .cont=CONTINUE},
+
+	{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=0,
+	.next_step=3, .cont=END_PHASE}},
+
+
+	//FASE1
+	{{.dac_signal[0]=2.9, .dac_signal[1]=0, .dac_signal[2]=0,
+	.next_step=3, .cont=CONTINUE},
+
+	{.dac_signal[0]=2.9, .dac_signal[1]=0, .dac_signal[2]=0,
+	.next_step=3, .cont=END_PHASE}},
+
+
+	// FASE2
+	{{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=0,
+	.next_step=9, .cont=CONTINUE},
+
+	{.dac_signal[0]=0, .dac_signal[1]=2.8, .dac_signal[2]=0,
+	.next_step=3, .cont=CONTINUE},
+
+	{.dac_signal[0]=0, .dac_signal[1]=2.8, .dac_signal[2]=0,
+	.next_step=3, .cont=END_PHASE}},
+
+
+	// FASE3
+	{{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=0,
+	.next_step=9, .cont=CONTINUE},
+
+	{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=2.8,
+	.next_step=3, .cont=CONTINUE},
+
+	{.dac_signal[0]=0, .dac_signal[1]=0, .dac_signal[2]=2.8,
+	.next_step=3, .cont=END_PHASE}},
+
+
+	// FASE4
+	{{.dac_signal[0]=0,
+	.dac_signal[1]=0,
+	.dac_signal[2]=0,
+	.next_step=9,
+	.cont=CONTINUE},
+
+	{.dac_signal[0]=2.9,
+	.dac_signal[1]=0,
+	.dac_signal[2]=0,
+	.next_step=9,
+	.cont=CONTINUE},
+
+	{.dac_signal[0]=2.9,
+	.dac_signal[1]=2.8,
+	.dac_signal[2]=0,
+	.next_step=3,
+	.cont=CONTINUE},
+
+	{.dac_signal[0]=2.9,
+	.dac_signal[1]=2.8,
+	.dac_signal[2]=0,
+	.next_step=3,
+	.cont=END_PHASE}},
+
+
+	// FASE5
+	{{.dac_signal[0]=0,
+	.dac_signal[1]=0,
+	.dac_signal[2]=0,
+	.next_step=108,
+	.cont=CONTINUE},
+
+	{.dac_signal[0]=2.9,
+	.dac_signal[1]=0,
+	.dac_signal[2]=0,
+	.next_step=9,
+	.cont=CONTINUE},
+
+	{.dac_signal[0]=2.9,
+	.dac_signal[1]=2.8,
+	.dac_signal[2]=0,
+	.next_step=3,
+	.cont=CONTINUE},
+
+	{.dac_signal[0]=0,
+	.dac_signal[1]=0,
+	.dac_signal[2]=0,
+	.next_step=3,
+	.cont=CONTINUE},
+
+	{.dac_signal[0]=0,
+	.dac_signal[1]=0,
+	.dac_signal[2]=0,
+	.next_step=3,
 	.cont=END_PHASE}}
 };
 
